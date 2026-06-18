@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — The Gender Safety Net Initiative</title>
+  <meta name="description" content="About the Gender Safety Net Initiative — a student-led research project exploring barriers to grievance redressal in Indian higher education.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .about-hero {
+      padding: 3.5rem 0 2rem;
+      text-align: center;
+      max-width: 46rem;
+      margin: 0 auto;
+    }
+
+    .about-hero .hero-eyebrow {
+      margin-bottom: 1rem;
+    }
+
+    .about-hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2.2rem, 5.5vw, 3.4rem);
+      font-weight: 600;
+      line-height: 1.08;
+      margin-bottom: 1.15rem;
+      letter-spacing: -0.01em;
+    }
+
+    .about-hero h1 em {
+      font-style: italic;
+      font-weight: 500;
+    }
+
+    .about-hero .hero-lead {
+      max-width: 34rem;
+      margin: 0 auto;
+      color: var(--cream-soft);
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+
+    .about-body {
+      max-width: 46rem;
+      margin: 0 auto;
+      padding-bottom: 4rem;
+    }
+
+    .about-section {
+      margin-bottom: 2.5rem;
+    }
+
+    .about-section h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.5rem, 3vw, 1.9rem);
+      font-weight: 600;
+      margin-bottom: 0.85rem;
+      letter-spacing: -0.01em;
+    }
+
+    .about-section p {
+      color: var(--cream-soft);
+      line-height: 1.75;
+      margin-bottom: 0.85rem;
+    }
+
+    .about-section p:last-child {
+      margin-bottom: 0;
+    }
+
+    .stat-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+
+    .stat-card {
+      background: var(--surface);
+      border: 1px solid var(--cream-border);
+      border-radius: var(--radius-lg);
+      padding: 1.25rem 1.4rem;
+      text-align: center;
+    }
+
+    .stat-number {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 5vw, 2.75rem);
+      font-weight: 600;
+      line-height: 1;
+      margin-bottom: 0.4rem;
+    }
+
+    .stat-label {
+      color: var(--cream-soft);
+      font-size: 0.86rem;
+      line-height: 1.45;
+    }
+
+    .how-list {
+      list-style: none;
+      display: grid;
+      gap: 1rem;
+      margin-top: 1.25rem;
+    }
+
+    .how-list li {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+    }
+
+    .how-step {
+      width: 2rem;
+      height: 2rem;
+      border-radius: 50%;
+      border: 1px solid var(--cream-border-strong);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--cream-muted);
+    }
+
+    .how-text strong {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 0.2rem;
+      color: var(--cream);
+    }
+
+    .how-text span {
+      color: var(--cream-soft);
+      font-size: 0.92rem;
+      line-height: 1.6;
+    }
+
+    .about-cta {
+      margin-top: 2.5rem;
+      padding: 1.5rem;
+      background: var(--surface-raised);
+      border: 1px solid var(--cream-border);
+      border-radius: var(--radius-lg);
+      text-align: center;
+    }
+
+    .about-cta p {
+      margin-bottom: 1rem;
+      color: var(--cream-soft);
+    }
+
+    .divider {
+      border: none;
+      border-top: 1px solid var(--cream-border);
+      margin: 2.5rem 0;
+    }
+
+    .author-row {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .author-avatar {
+      width: 3rem;
+      height: 3rem;
+      border-radius: 50%;
+      border: 1px solid var(--cream-border-strong);
+      background: var(--surface);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--cream-muted);
+    }
+
+    .author-info strong {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 0.15rem;
+    }
+
+    .author-info span {
+      color: var(--cream-muted);
+      font-size: 0.86rem;
+    }
+
+    @media (max-width: 520px) {
+      .stat-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-text">
+          <strong>The Gender Safety Net Initiative</strong>
+          <small>Anonymous · Student centred</small>
+        </span>
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="index.html" class="nav-link">Find guidance</a>
+        <a href="index.html#your-rights" class="nav-link">Your rights</a>
+        <button id="quick-exit" type="button" class="nav-link quick-exit" title="Leave this page immediately (Esc)">
+          <i class="ti ti-door-exit" aria-hidden="true"></i>
+          Leave quickly
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <div class="about-hero">
+      <p class="hero-eyebrow">About this project</p>
+      <h1>Why this tool <em>exists.</em></h1>
+      <p class="hero-lead">
+        The Gender Safety Net Initiative began as a research question and grew into something more concrete — a tool built from real data, for real students.
+      </p>
+    </div>
+
+    <div class="about-body">
+
+      <section class="about-section">
+        <h2>The problem</h2>
+        <p>
+          Indian universities are required by law to have Internal Complaints Committees. The POSH Act has been in force since 2013. The UGC issued specific regulations for higher education in 2015. On paper, the framework exists.
+        </p>
+        <p>
+          In practice, most students have never had any of it explained to them. When something happens — harassment, discrimination, a hostile classroom — the systems that are supposed to help are invisible, confusing, or simply not trusted. Students stay silent, not because nothing happened, but because every pathway to help feels too difficult, too exposed, or too unlikely to work.
+        </p>
+        <p>
+          This project started with a simple question: what is actually stopping students from accessing the protections that already exist?
+        </p>
+      </section>
+
+      <hr class="divider">
+
+      <section class="about-section">
+        <h2>What the research found</h2>
+        <p>
+          A survey of 80 students across Indian higher educational institutions produced some clear answers. The numbers below are not abstract — they represent students navigating these situations right now, on campuses across the country.
+        </p>
+
+        <div class="stat-grid">
+          <div class="stat-card">
+            <div class="stat-number">33%</div>
+            <div class="stat-label">faced discrimination, exclusion, or hostility due to gender identity or sexual orientation</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">70%</div>
+            <div class="stat-label">cited distrust in college authorities as their top reason for not reporting</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">67.5%</div>
+            <div class="stat-label">were never told how the grievance mechanism at their institution works</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">97.5%</div>
+            <div class="stat-label">said colleges must provide simpler, more accessible guidance on gender rights</div>
+          </div>
+        </div>
+
+        <p>
+          The barriers were not primarily legal or structural — they were informational and psychological. Students did not know where to go, did not trust the process, and feared exposure more than the incident itself. An anonymous, plain-language digital tool was the most consistently requested solution.
+        </p>
+      </section>
+
+      <hr class="divider">
+
+      <section class="about-section">
+        <h2>How to use this tool</h2>
+        <p>
+          This tool is designed to be used privately, at your own pace, with no pressure to commit to anything. Nothing you explore here is recorded or shared.
+        </p>
+
+        <ul class="how-list">
+          <li>
+            <div class="how-step">1</div>
+            <div class="how-text">
+              <strong>Read the definitions</strong>
+              <span>The collapsible sections at the top of the guidance page explain what counts as sexual harassment and what consent means — in plain language, without legal jargon.</span>
+            </div>
+          </li>
+          <li>
+            <div class="how-step">2</div>
+            <div class="how-text">
+              <strong>Use the decision tree</strong>
+              <span>Select the option closest to your situation. Each choice narrows the guidance to what's most relevant to you. You can change any selection at any time.</span>
+            </div>
+          </li>
+          <li>
+            <div class="how-step">3</div>
+            <div class="how-text">
+              <strong>Explore your options</strong>
+              <span>The tool surfaces support pathways — formal complaints, peer support, mental health resources, faculty allies, or documentation guidance — based on what you're looking for.</span>
+            </div>
+          </li>
+          <li>
+            <div class="how-step">4</div>
+            <div class="how-text">
+              <strong>Check your rights</strong>
+              <span>The Your Rights section explains the POSH Act, UGC Regulations, and Vishaka Guidelines in plain language, and links to official government portals.</span>
+            </div>
+          </li>
+        </ul>
+
+        <p style="margin-top:1.25rem">
+          You do not need to know what happened to you, or what to call it, before you start. The tool is designed to help you find that clarity.
+        </p>
+      </section>
+
+      <hr class="divider">
+
+      <section class="about-section">
+        <h2>Scope and limitations</h2>
+        <p>
+          This tool provides general guidance only. It does not constitute legal advice, initiate complaints on your behalf, or guarantee any particular outcome. Helpline numbers and institutional contacts may change — always verify through your institution's official channels.
+        </p>
+        <p>
+          The survey data underpinning this project was collected through convenience sampling and is not nationally representative. The tool is intended as a starting point, not a substitute for professional legal or mental health support.
+        </p>
+      </section>
+
+      <hr class="divider">
+
+      <div class="author-row" style="margin-bottom:2.5rem">
+        <div class="author-avatar">PK</div>
+        <div class="author-info">
+          <strong>Pranav Khatri</strong>
+          <span>Ramjas College, University of Delhi · Class of 2026</span>
+        </div>
+      </div>
+
+      <div class="about-cta">
+        <p>Ready to use the tool? Start anonymously, at your own pace.</p>
+        <a href="index.html" class="btn">
+          <i class="ti ti-compass" aria-hidden="true"></i>
+          Go to the guidance tool
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>The Gender Safety Net Initiative</p>
+  </footer>
+
+  <script>
+    // Header scroll visibility (same as main site)
+    const updateHeader = () => document.body.classList.toggle('has-scrolled', window.scrollY > 12);
+    updateHeader();
+    window.addEventListener('scroll', updateHeader, { passive: true });
+
+    // Quick exit
+    document.getElementById('quick-exit').addEventListener('click', () => window.location.replace('https://www.google.com'));
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') window.location.replace('https://www.google.com'); });
+  </script>
+</body>
+</html>
